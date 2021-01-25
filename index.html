@@ -13,24 +13,22 @@ let num = Math.floor(Math.random() * 100)+1;
     let numGuesses = 0; 
 
     
-    
     while (gotIt === false) {
-      numGuesses++;
-      if (num == guess) { 
-        gotIt = true
-
-      } else { 
-
-        if (num > guess) {
-          guess = prompt("Try again, This time higher!")
-
-        } else {
-          guess = prompt("Try again, This time lower!")
+                if (num == guess) {
+                    numGuesses++;
+                    alert("You guessed the correct number, which was " + num + " and it took you " + numGuesses + " guesses.");
+                    gotIt = true;
+                } else if (num > guess) {
+                    numGuesses++;
+                    guess = prompt("Your guess is lower. Guess again!");
+                }
+                else {
+                    numGuesses++;
+                    guess = prompt(" Your guess is higher. Guess again!");
+                }
+            }
+            alert("You guessed: " + guess + " \nThe number was: " + num);
         }
-        // alert("Sorry!  You guessed " + guess + " and the number was " + num);
-
-      }
-    }
 
 </script>
 </body>
