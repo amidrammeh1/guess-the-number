@@ -14,6 +14,28 @@
         alert("Sorry!  You guessed " + guess + " and the number was " + num);
 
     }
+     while (gotIt === false) {
+      numGuesses++;
+      if (num == guess) { 
+        gotIt = true
+
+      } else { 
+
+        if (num > guess) {// guess higher
+          guess = prompt("Try again, This time higher!")
+
+        } else {// guess lower
+          guess = prompt("Try again, This time lower!")
+        }
+        // alert("Sorry!  You guessed " + guess + " and the number was " + num);
+
+      }
+    }
+
+    
+
+    alert("Got it!! You guessed " + numGuesses + " times!");
+
 
 </script>
 </body>
